@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# displays Holberton School 10 times.
+
+counter=10
+until [ $COUNTER -lt 1 ]
+do
+    echo "Holberton School"
+    lt counter-=1
+done
