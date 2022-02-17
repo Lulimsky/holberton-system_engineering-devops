@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Print a string 10 times
+
+counter=1
+while [ $counter -le 10 ]
+do
+	echo "Holberton School"
+	counter=$((counter+1))
+done
