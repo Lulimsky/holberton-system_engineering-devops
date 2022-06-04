@@ -10,4 +10,14 @@ And to ensure that the root cause(s) of the outage has been discovered and that 
 
 ![](https://i.redd.it/vri4ra46xi531.jpg)
 
-Here is the postmortem report on debbuging an 500 Error:  https://docs.google.com/document/d/1Q67BoQ3Y0dm-r6jnCPwnD-_Vqf-9wZYTABahYgzuTuE/edit?usp=sharing
+ ## Handling API Gateway 500 Error: Internal Server Error
+ 
+The 500 status code might be the most used and most generic HTTP error on this planet. If you get it from an API endpoint that integrates with AWS Lambda, it usually means your code buggy.
+
+The next source for this error is inconsistent error mapping. Many of the errors we talked about here can become a 500 error when finally landing on your client as a response. You’ll get a “limit exceeded,” but it will have a 500 status code instead of 429. So you have to extract the right error out of this response, check what the real cause is, and then look at how to solve it.
+
+Since the error can be anything really, a retry can technically solve that problem, but usually, it doesn’t.
+
+If you monitor your system carefully and get one of these every few million requests, it could be that cosmic rays flipped some bits or whatever. Still, if you see a 500 status code more often than that, it’s crucial to investigate; it can very well point to an inconsistency that will blow up sooner or later.
+
+So here is the postmortem report on debbuging an 500 Error:  https://docs.google.com/document/d/1Q67BoQ3Y0dm-r6jnCPwnD-_Vqf-9wZYTABahYgzuTuE/edit?usp=sharing
