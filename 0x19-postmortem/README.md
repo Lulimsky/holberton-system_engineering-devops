@@ -8,6 +8,6 @@ A postmortem is a tool widely used in the tech industry. After any outage, the t
 To provide the rest of the company’s employees easy access to information detailing the cause of the outage. Often outages can have a huge impact on a company, so managers and executives have to understand what happened and how it will impact their work.
 And to ensure that the root cause(s) of the outage has been discovered and that measures are taken to make sure it will be fixed.
 
-![](https://github.com/Lulimsky/holberton-system_engineering-devops/issues/1#issuecomment-1146688665)
+![](https://i.redd.it/vri4ra46xi531.jpg)
 
 Here is the postmortem report on debbuging an 500 Error:  https://docs.google.com/document/d/1Q67BoQ3Y0dm-r6jnCPwnD-_Vqf-9wZYTABahYgzuTuE/edit?usp=sharing
